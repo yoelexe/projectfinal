@@ -1,0 +1,198 @@
+
+[
+    {
+        "id_dulceria": 1, 
+        "nombre": "Palomita1", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion1",
+        "precio_venta": 16.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 2, 
+        "nombre": "Palomita2", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion2",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 3, 
+        "nombre": "Palomita3", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion3",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 4, 
+        "nombre": "Palomita4", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion4",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 5, 
+        "nombre": "Palomita5", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion5",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 6, 
+        "nombre": "Palomita6", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion6",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 7, 
+        "nombre": "Palomita7", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion7",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 8, 
+        "nombre": "Palomita8", 
+        "categ_dulce":{
+            "categ_dulce": 1,
+            "nombre": "Palomitas",
+            "estado": 1
+            },
+        "descripcion": "descripcion8",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 9, 
+        "nombre": "Bebidas1", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion9",
+        "precio_venta": 11.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 10, 
+        "nombre": "Bebidas2", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion10",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 11, 
+        "nombre": "Bebidas3", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion11",
+        "precio_venta": 11.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 12, 
+        "nombre": "Bebidas4", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion12",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 13, 
+        "nombre": "Bebidas5", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion13",
+        "precio_venta": 11.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 14, 
+        "nombre": "Bebidas6", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion14",
+        "precio_venta": 21.5,
+        
+        "estado": 1
+    },
+    {
+        "id_dulceria": 15, 
+        "nombre": "Bebidas7", 
+        "categ_dulce":{
+            "categ_dulce": 2,
+            "nombre": "Bebidas",
+            "estado": 1
+            },
+        "descripcion": "descripcion5",
+        "precio_venta": 11.5,
+        
+        "estado": 1
+    }
+]
