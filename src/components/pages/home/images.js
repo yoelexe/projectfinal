@@ -8,4 +8,4 @@ import img7 from './image/img7.jpg';
 import img8 from './image/img8.jpg';
 import img9 from './image/img9.jpg';
 
-export default [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+export const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
