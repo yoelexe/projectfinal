@@ -14,10 +14,10 @@ const CardMovies = (props) => {
   return (
     <div className="col">
       <li className="card">
-        <img src="https://cinestar-files.obs.la-south-2.myhuaweicloud.com/movies/1649364917.jpg" className="card-img-top" alt="..." />
+        <img src={props.img_peli} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.nombre}</h5>
-          <p className="card-text">{props.descripcion}</p>
+          <p className="card-text">{props.genero.nombre} | {props.duracion} mins | {props.clasificacion}</p>
           <button className="btn btn-success" onClick={agregar}>
             Agregar al carrito
           </button>

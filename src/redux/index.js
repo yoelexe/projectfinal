@@ -1,6 +1,5 @@
 import { actions } from "./actions";
 import dulces from '../data/dulces.json'
-import movies from '../data/movies.json'
 
 const INITIAL_STATE={
     usuario : "",
@@ -8,7 +7,8 @@ const INITIAL_STATE={
     filtrado: [],
     filtradoPeliculas: [],
     dulces,
-    movies
+    movies : [],
+    genero: []
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -17,6 +17,16 @@ const reducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state,
                 usuario: action.payload
+            }
+        case actions.setPeliculas:
+            return {
+                ...state,
+                movies : action.payload
+            }
+        case actions.getGenero:
+            return {
+                ...state,
+                genero : action.payload
             }
         case actions.agregarCarritoDulce:
             
