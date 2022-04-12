@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../home/ListMovies.css';
-import images from './images';
+import {images} from './images';
 import {motion} from 'framer-motion';
 import {useRef, useEffect, useState} from 'react';
 
