@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPeliculasThunk } from "../../../redux/actions";
+import { getPeliculasThunk } from "../../../redux/actions/peliculasAc";
 import { Buscadores } from "./Buscadores";
 import CardMovies from "./CardMovies";
-//import './Movies.css';
-//import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 
 const Movies = () => {
   const dispatch = useDispatch();
@@ -15,7 +13,7 @@ const Movies = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    dispatch(setPeliculasThunk());
+    dispatch(getPeliculasThunk());
     if(filtradoPeliculas.length === 0){
       return setData(movies) 
     } else {
@@ -23,14 +21,14 @@ const Movies = () => {
     }
   }, [dispatch, movies, filtradoPeliculas]);
   return (
-    <>
+    <div className="movies">
       <Buscadores setData={setData} />
-      <ul className="row row-cols-1 row-cols-md-4 g-4">
+      <ul className="row row-cols-1 row-cols-md-5 g-4">
         {data.map((p) => (
           <CardMovies key={p.id_pelicula} {...p} />
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 export default Movies;
