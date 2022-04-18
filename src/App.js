@@ -1,32 +1,35 @@
-import React from 'react';
-import './App.css';
-import {HashRouter, Routes, Route} from 'react-router-dom'
-import Navbar from './components/generals/navbar/Navbar';
-import Home from './components/pages/home/Home';
-import Footer from './components/generals/footer/Footer'
-import Movies from './components/pages/movies/Movies';
-import Dulceria from './components/pages/dulceria/Dulceria';
-import { DetallePeli } from './components/pages/movies/DetallePeli';
-import { CiudadAmin } from './components/pages/admin/Ciudad/CiudadAmin';
-
+import React from "react";
+import "./App.css";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/generals/navbar/Navbar";
+import Home from "./components/pages/home/Home";
+import Footer from "./components/generals/footer/Footer";
+import Movies from "./components/pages/movies/Movies";
+import Dulceria from "./components/pages/dulceria/Dulceria";
+import { DetallePeli } from "./components/pages/movies/DetallePeli";
+import { DashBoard } from "./components/pages/admin/DashBoard";
+import { PeliculasAdmin } from "./components/pages/admin/Peliculas/PeliculasAdmin";
+import { SedesAdmin } from "./components/pages/admin/Sedes/SedesAdmin";
 
 function App() {
   return (
     <HashRouter>
       <div className="App">
         <Navbar />
-    
-        
-        <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/dulceria' element={<Dulceria />}/>
-          <Route path='/peliculas' element={<Movies />}/>
-          <Route path='/peliculas/:id' element={<DetallePeli />}/>
-          <Route path='/ciudad/admin' element={<CiudadAmin />}/>
-          <Route path='/*' element={<p>página no encontrada</p>}/>
 
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/dulceria" element={<Dulceria />} />
+          <Route path="/peliculas" element={<Movies />} />
+          <Route path="/peliculas/:id" element={<DetallePeli />} />
+          <Route path="/admin" element={<DashBoard />}>
+            <Route path="sedes" element={<SedesAdmin />}/>
+            <Route path="peliculas" element={<PeliculasAdmin />}/>
+          </Route>
+          <Route path="/*" element={<p>página no encontrada</p>} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </HashRouter>
   );

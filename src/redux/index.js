@@ -4,7 +4,7 @@ import { sedeActions } from "./actions/sedesAc";
 import dulces from '../data/dulces.json'
 
 const INITIAL_STATE={
-    usuario : "",
+    usuario : [],
     carrito : [],
     filtrado: [],
     filtradoPeliculas: [],
@@ -13,6 +13,7 @@ const INITIAL_STATE={
     genero: [],
     ciudad: [],
     sedes: [],
+    todosUsuarios: [],
     update: null
 }
 
@@ -21,19 +22,22 @@ const reducer = (state = INITIAL_STATE, action) => {
         case actions.logeado:
             return{
                 ...state,
-                usuario: action.payload
+                usuario: [action.payload]
+            }
+        case actions.usuarios:
+            return{
+                ...state,
+                todosUsuarios: action.payload
             }
         case pelActions.getPeliculas:
             return {
                 ...state,
-                movies : action.payload,
-                update: null
+                movies : action.payload
             }
         case pelActions.getGenero:
             return {
                 ...state,
-                genero : action.payload,
-                update: null
+                genero : action.payload
             }
         case sedeActions.getCiudad:
             return {
@@ -61,14 +65,14 @@ const reducer = (state = INITIAL_STATE, action) => {
                 carrito: [...state.carrito, {...nuevod, cantidad: 1}]
             }
         case actions.agregarCarritoPeli:
-            let nuevop = state.movies.find(p => p.id_movies === action.payload);
-            let buscarp = state.carrito.find(item => item.id_movies === nuevop.id_movies)
+            let nuevop = state.movies.find(p => p.id_pelicula === parseInt(action.payload));
+            let buscarp = state.carrito.find(item => item.id_pelicula === nuevop.id_pelicula)
             return buscarp 
             ? {
                 ...state,
                 carrito: state.carrito.map(item => 
-                    item.id_dulceria === nuevop.id_dulceria 
-                    ? {...item, cantidad: item.cantidad + 1} 
+                    item.id_pelicula === nuevop.id_pelicula 
+                    ? {...item, cantidad: item.cantidad + 1, precio_venta:20} 
                     : item)
             } : {
                 ...state,

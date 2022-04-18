@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   postCiudadThunk,
   putCiudadThunk,
-} from "../../../../redux/actions/sedesAc";
+} from "../../../../../redux/actions/sedesAc";
 
 export const CiudadForm = () => {
   const dispatch = useDispatch();
 
   const update = useSelector((state) => state.update);
+
   const [nomCiu, setNomCiu] = useState("");
   const [estado, setEstado] = useState(true);
 
@@ -41,7 +42,7 @@ export const CiudadForm = () => {
     setEstado(true);
   };
   return (
-    <div className="container">
+    <div className="container crudModalForm">
       <form className="col g-3" onSubmit={submit}>
         <div className="col-3">
           <label htmlFor="nombre" className="form-label">

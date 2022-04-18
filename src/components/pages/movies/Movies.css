@@ -3,3 +3,18 @@
     position: relative;
     left: 5%
 }
+
+.detalle > img{
+    width: 25%;
+}
+
+.detalle_img > img {
+    width: 100%;
+}
+
+.detalle > p {
+    width: 30%;
+    position: absolute;
+    right: 20rem;
+    top: 15rem
+}

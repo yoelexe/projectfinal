@@ -47,8 +47,8 @@ const Carrito = () => {
       </Offcanvas.Header>
       <Offcanvas.Body>
         <ul className="list-group">
-          {carrito.map((el) => (
-            <li className="row g-0" key={el.id_dulceria}>
+          {carrito.map((el,i) => (
+            <li className="row g-0" key={i}>
             <div className="col-md-4">
               <img src="https://elmen.pe/wp-content/uploads/2018/02/Combos-de-cine.jpg" className="img-fluid rounded-start" alt="..." />
             </div>

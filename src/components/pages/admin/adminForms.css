@@ -1,0 +1,29 @@
+.DashBoard{
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+.crudForm,
+.crudModalForm{
+    
+    position: absolute;
+}
+
+.crudList{
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 100px
+}
+
+.crudModalList{
+    width: 60%;
+    position: relative;
+    left: 20%;
+}
+
+.btn-modal{
+    position: absolute;
+    right: 0;
+    top: 1rem;
+}

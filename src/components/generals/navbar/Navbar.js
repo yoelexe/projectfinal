@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Login } from "../../pages/login/Login";
 import Carrito from "../carrito/Carrito";
-import './Navbar.css'
+import "./Navbar.css";
 
 function Navbar() {
   const [show, setShow] = useState(false);
+  const [login, setLogin] = useState(false);
+  const usuario = useSelector((state) => state.usuario);
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -41,18 +45,42 @@ function Navbar() {
                   Dulceria
                 </Link>
               </li>
+
+              {usuario.length !== 0 &&
+              usuario[0].roles.nom_rol === "administrador" ? (
+                <li className="nav-item">
+                  <Link className='nav-link' to="/admin">DashBoard</Link>
+                </li>
+              ) : (
+                <span></span>
+              )}
               <li className="nav-item">
-                <Button className='btnCarrito' variant="light" onClick={() => setShow(!show)}>
-                  Carrito
+                <Button
+                  className="btnCarrito"
+                  variant="light"
+                  onClick={() => setShow(!show)}
+                >
+                  Boletería
                 </Button>
               </li>
             </ul>
+            <div className="d-flex">
+              <Button
+                className="btnCarrito"
+                variant="light"
+                onClick={() => setLogin(!login)}
+              >
+                Login
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
       <Offcanvas show={show} onHide={() => setShow(!show)} placement={"end"}>
         <Carrito />
       </Offcanvas>
+
+      <Login login={login} setLogin={setLogin} />
     </>
   );
 }
